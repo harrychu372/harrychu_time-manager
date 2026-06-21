@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高效專注金句計時器 ⏱️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="nav-tabs">
+        <button id="tab-timer" class="tab-btn active">⏱️ 專注計時</button>
+        <button id="tab-dashboard" class="tab-btn">📊 紀錄後台</button>
+    </div>
+
+    <hr>
+
+    <div id="page-timer" class="page-content active">
+        <h1>高效專注計時器</h1>
+        <div class="input-group">
+            <label for="taskName">任務名稱：</label>
+            <input type="text" id="taskName" placeholder="例如：寫期末專題、讀英文...">
+        </div>
+        <div class="input-group">
+            <label for="duration">專注時間：</label>
+            <select id="duration">
+                <option value="0.1">0.1 分鐘 (上台演示用)</option>
+                <option value="25" selected>25 分鐘 (標準番茄鐘)</option>
+                <option value="45">45 分鐘</option>
+                <option value="60">60 分鐘</option>
+            </select>
+        </div>
+
+        <div class="quote-box" id="quoteBox">
+            填寫任務並點擊開始，系統將自動獲取專注金句...
+        </div>
+
+        <div class="timer-display" id="timerDisplay">25:00</div>
+        <button id="startBtn">開始專注 🚀</button>
+    </div>
+
+    <div id="page-dashboard" class="page-content">
+        <h2>專注大數據管理後台</h2>
+        <p class="status-tip">數據同步中：資料皆會即時備份至雲端試算表</p>
+        <div class="table-container">
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>任務名稱</th>
+                        <th>時間(分)</th>
+                        <th>完成時間</th>
+                        <th>當時分配金句</th>
+                    </tr>
+                </thead>
+                <tbody id="historyBody">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="status" id="statusText"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
