@@ -39,12 +39,12 @@ input, select {
     padding: 15px; margin: 20px 0; border-radius: 0 10px 10px 0;
     text-align: left; font-style: italic; min-height: 50px;
 }
-button id="startBtn" {
+#startBtn {
     width: 100%; padding: 14px; background: var(--primary);
     color: white; border: none; border-radius: 8px; font-size: 18px;
     font-weight: bold; cursor: pointer; transition: background 0.3s;
 }
-button id="startBtn":disabled { background: #b2bec3; cursor: not-allowed; }
+#startBtn:disabled { background: #b2bec3; cursor: not-allowed; }
 
 /* 歷史紀錄表格樣式 */
 .table-container { overflow-x: auto; margin-top: 15px; }
